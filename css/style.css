@@ -131,9 +131,51 @@ textarea, input, button { outline: none; }
   overflow: auto;
 }
 
-.nav ul li { float: left; padding: 5px 20px; }
+.nav ul li { float: left; padding: 5px 20px; cursor: pointer; }
 .nav ul li a { color: #7D716E; }
 .nav ul li a:hover {
+  color: #5F5653;
+  font-family: 'gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+.nav-info {
+  color: #7c6e66;
+  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.nav-info a { color: #7c6e66 }
+.nav-info span, .nav-info a:hover { color: #eacc12; }
+.nav-box {
+  display: none;
+  width: 100%; height: 240px;
+  background-color: #fff;
+  box-shadow: 0 3px 2px 1px rgba(0,0,0,0.1);
+  position: absolute;
+  z-index: 1;
+}
+
+.nav-box .wrapper {
+  max-width: 980px; height: 100%;
+  border-left: 1px solid #fdfdfd;
+  border-right: 1px solid #fdfdfd;
+  padding: 45px 35px;
+}
+
+.nav-box .wrapper > div { overflow: auto; }
+
+.nav-box ul { margin: 0; float: left; margin-right: 80px; }
+.nav-box ul li {
+  font-family: 'gotham-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.nav-box ul li a { color: #7c6e66; }
+.nav-box ul li a:hover {
   color: #5F5653;
   font-family: 'gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-decoration: none;
@@ -242,16 +284,6 @@ textarea, input, button { outline: none; }
   transform: translateX(-50%);
 }
 
-.nav-info {
-  color: #7c6e66;
-  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
-  font-size: 16px;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-.nav-info a { color: #7c6e66 }
-.nav-info span, .nav-info a:hover { color: #eacc12; }
 #banner img { width: 100%; }
 
 .carousel-indicators {

@@ -10,6 +10,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="../../js/nav.js"></script>
 </head>
 
 <body>
@@ -24,7 +25,9 @@
           </div>
         </div>
 
-        <img class="logo" src="http://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/logo.svg" width="190" />
+        <a href="../index.html">
+          <img class="logo" src="http://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/logo.svg" width="190" />
+        </a>
 
         <div class="account">
           <p>
@@ -54,34 +57,134 @@
 
   <div class="nav">
     <ul>
-      <li>
+      <li data-tab="1">
         <a href="../new.html">NEW</a>
       </li>
 
-      <li>
+      <li data-tab="2">
         <a href="../letterpress-cards&amp;goods.html">LETTERPRESS CARDS &amp; GOODS</a>
       </li>
 
-      <li>
+      <li data-tab="3">
         <a href="../desk&amp;gift.html">DESK &amp; GIFT</a>
       </li>
 
-      <li>
+      <li data-tab="4">
         <a href="../custom-letterpress.html">CUSTOM LETTERPRESS</a>
       </li>
 
-      <li>
+      <li data-tab="5">
         <a href="../sale.html">SALE</a>
       </li>
 
-      <li>
+      <li data-tab="6">
         <a href="../shop-social.html">SHOP SOCIAL</a>
       </li>
 
-      <li>
+      <li data-tab="7">
         <a href="../blog.html">BLOG</a>
       </li>
     </ul>
+  </div>
+
+  <div class="nav-box">
+    <div class="wrapper">
+      <div id="1">
+        <ul>
+          <li>
+            <a href="../new/new-mini-notes.html">NEW MINI NOTES</a>
+          </li>
+
+          <li>
+            <a href="../new/new-greeting-cards.html">NEW GREETING CARDS</a>
+          </li>
+
+          <li>
+            <a href="../new/new-boxed-note-cards.html">NEW BOXED NOTE CARDS</a>
+          </li>
+
+          <li>
+            <a href="../new/new-stationery-and-desk.html">NEW STATIONERY AND DESK</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="2">
+        <ul>
+          <li>
+            <a href="../letterpress-cards&amp;goods/local-love-greeting-cards.html">LOCAL LOVE GREETING CARDS</a>
+          </li>
+
+          <li>
+            <a href="../letterpress-cards&amp;goods/greeting-cards.html">GREETING CARDS</a>
+          </li>
+
+          <li>
+            <a href="../letterpress-cards&amp;goods/boxed-note-cards.html">BOXED NOTE CARDS</a>
+          </li>
+
+          <li>
+            <a href="../letterpress-cards&amp;goods/mini-notes.html">MINI NOTES</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="../letterpress-cards&amp;goods/reception-and-event-decor.html">RECEPTION AND EVENT DECOR</a>
+          </li>
+
+          <li>
+            <a href="../letterpress-cards&amp;goods/holiday-cards">HOLIDAY CARDS</a>
+          </li>
+
+          <li>
+            <a href="../letterpress-cards&amp;goods/cross-stitch.html">CROSS STITCH</a>
+          </li>
+
+          <li>
+            <a href="custom-letterpress.html">CUSTOM LETTERPRESS</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="3">
+        <ul>
+          <li>
+            <a href="../desk&amp;gift/journals&amp;sketchbooks.html">JOURNALS &amp; SKETCHBOOKS</a>
+          </li>
+
+          <li>
+            <a href="../desk&amp;gift/notepads.html">NOTEPADS</a>
+          </li>
+
+          <li>
+            <a href="../desk&amp;gift/desk-accessories.html">DESK ACCESSORIES</a>
+          </li>
+
+          <li>
+            <a href="../desk&amp;gift/boxed-note-cards.html">BOXED NOTE CARDS</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="../desk&amp;gift/bijou-collection.html">BIJOU COLLECTION</a>
+          </li>
+
+          <li>
+            <a href="../desk&amp;gift/portland-collection.html">PORTLAND COLLECTION</a>
+          </li>
+
+          <li>
+            <a href="../desk&amp;gift/gift-bags.html">GIFT WRAP &amp; BAGS</a>
+          </li>
+
+          <li>
+            <a href="../desk&amp;gift/desk-collections.html">DESK COLLECTIONS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <div class="wrapper">
@@ -99,7 +202,7 @@
           <div class="card">
             <div class="card-header">Shopping Options</div>
           </div>
-          
+
           <!-- 1 -->
           <div class="card">
             <div class="card-header" role="tab" id="new-head">
