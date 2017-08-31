@@ -1,0 +1,958 @@
+@font-face{ font-family:'FilosofiaOT-Italic'; src:url('../fonts/Filosofia OT Italic.woff'); }
+@font-face{ font-family:'FilosofiaOT-Italic'; src:url('../fonts/Filosofia OT Italic.otf.eot'); }
+@font-face{ font-family:'Gotham-Light'; src:url('../fonts/Gotham-Light.woff'); }
+@font-face{ font-family:'Gotham-Light'; src:url('../fonts/Gotham-Light.eot'); }
+@font-face{ font-family:'Gotham-Book'; src:url('../fonts/Gotham-Book.woff'); }
+@font-face{ font-family:'Gotham-Book'; src:url('../fonts/Gotham-Book.eot'); }
+@font-face{ font-family:'Gotham-Medium'; src:url('../fonts/Gotham-Medium.woff'); }
+@font-face{ font-family:'Gotham-Medium'; src:url('../fonts/Gotham-Medium.eot'); }
+@font-face{ font-family:'Gotham-Bold'; src:url('../fonts/Gotham-Bold.woff'); }
+@font-face{ font-family:'Gotham-Bold'; src:url('../fonts/Gotham-Bold.eot'); }
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+* { margin: 0; padding: 0; }
+li { list-style: none; }
+textarea, input, button { outline: none; }
+
+/* header */
+
+.top-header {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #cdd7e0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bottom-header {
+  height: 160px;
+  position: relative;
+}
+
+.bottom-header .search {
+  position: absolute;
+  top: 70px; left: 0;
+}
+
+.bottom-header .search-input {
+  height: 40px;
+  position: relative;
+}
+
+.bottom-header .search-input img {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.bottom-header .search-input input {
+  width: 200px;
+  height: 100%;
+  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
+  font-size: 17px;
+  border: 0;
+  border-bottom: solid 1px #e5e3e2;
+  padding-left: 35px;
+}
+
+.bottom-header .search-input input:focus {
+  border: 0;
+  border-bottom: solid 1px #eacc12;
+}
+
+.bottom-header .logo {
+  position: absolute;
+  top: 60px; left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom-header .account {
+  position: absolute;
+  top: 75px; right: 0;
+}
+
+.bottom-header .account p {
+  font-family: 'gotham-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.bottom-header .account p a { color: #7D716D; }
+
+.bottom-header .account .my-info {
+  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+  overflow: auto;
+}
+
+.bottom-header .account .my-info li { float: left; }
+
+.bottom-header .account .my-info li:nth-child(1),
+.bottom-header .account .my-info li:nth-child(2) {
+  margin-top: 10px;
+  padding: 2px 0;
+  padding-right: 10px;
+}
+
+.bottom-header .account .my-info li:nth-child(2) {
+  border-left:2px solid #ededed;
+  padding: 2px 10px;
+}
+
+.bottom-header .account .my-info li:nth-child(3) .bag {
+  display: inline-block;
+  width: 32px; height: 36px;
+  background: url(http://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/shopping-bag.png);
+}
+
+.bottom-header .account .my-info li:nth-child(3):hover .bag {
+  background: url(http://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/shopping-bag-active.png);
+}
+
+.bottom-header .account .my-info li a { color: #7D716D; }
+
+/* navigation */
+
+.nav {
+  height: 73px;
+  padding: 20px 0;
+}
+
+.nav ul {
+  width: 1100px;
+  font-family: 'gotham-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.nav ul li { float: left; padding: 5px 20px; }
+.nav ul li a { color: #7D716E; }
+.nav ul li a:hover {
+  color: #5F5653;
+  font-family: 'gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+.page-title {
+  color: #7c6e66;
+  font-family: 'gotham-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  color: #7c6e66;
+  font-family: 'gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.desc a { font-family: 'gotham-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #eacc12; }
+
+.footer {
+  height: 345px;
+  color: #7d716d;
+  font-family: 'gotham-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  background: #e5e5e4;
+  margin-top: 140px;
+}
+
+.footer .wrapper { height: 100%; position: relative; }
+
+.footer .services { position: absolute; top: 50px; left: 0; }
+.footer p {
+  font-family: 'gotham-bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.footer .services li:hover { font-family: 'gotham-bold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.footer li { margin-bottom: 5px; }
+.footer li a { color: #7d716d; }
+.footer li a:hover { text-decoration: none; }
+
+.footer .newsfun { position: absolute; top: 50px; left: 220px; }
+.footer .newsfun ul { margin-top: 20px; overflow: auto; }
+.footer .newsfun li { margin-right: 10px; float: left; }
+.footer .newsfun li span {
+  display: inline-block;
+  width: 40px; height: 40px;
+}
+
+.footer .newsfun li:nth-child(1) span { background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/facebook-footer.png); }
+.footer .newsfun li:nth-child(2) span { background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/twitter-footer.png); }
+.footer .newsfun li:nth-child(3) span { background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/pinterest-footer.png); }
+.footer .newsfun li:nth-child(4) span { background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/instagram-footer.png); }
+
+.footer .etc-links { position: absolute; top: 155px; left: 220px; }
+
+.footer .invite-form {
+  text-align: center;
+  position: absolute;
+  top: 50px; right: 0;
+}
+
+.footer .invite-form .title {
+  height: auto;
+  font-size: 20px;
+}
+
+.footer .invite-form .email-input {
+  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
+  font-size: 16px;
+  text-align: center;
+  width: 350px; height: 60px;
+  border: 0;
+  border-bottom: 3px solid #e5e5e4;
+  transition: border-bottom .1s;
+}
+
+.footer .invite-form .email-input:focus {
+  border-bottom: 3px solid #eacc12;
+}
+
+.footer .invite-form button {
+  color: #fff;
+  font-family: 'gotham-bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background: #eacc12;
+  border: 2px solid #eacc12;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+.footer .invite-form button:hover {
+  color: #eacc12;
+  border: 2px solid #eacc12;
+  background: #fff;
+}
+
+.footer .copyright {
+  font-family: 'gotham-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  position: absolute;
+  bottom: 10px; left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-info {
+  color: #7c6e66;
+  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.nav-info a { color: #7c6e66 }
+.nav-info span, .nav-info a:hover { color: #eacc12; }
+#banner img { width: 100%; }
+
+.carousel-indicators {
+  display: inline-block;
+  width: 91px;
+  margin: 0;
+  left: auto; bottom: 10px; right: 0;
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+  border: 2px solid #fff;
+  width: 17px; height: 17px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .carousel-control {
+  z-index: 2;
+}
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+    height: 100%;
+}
+
+.main-item ul { margin-top: 40px; overflow: auto; }
+.main-item ul li { float: left; margin-right: 15px; }
+.main-item ul li:nth-child(3) { margin-right: 0; }
+.main-item ul li a { display: inline-block; width: 100%; height: 100%; position: relative; }
+.main-item ul li img { width: 390px; }
+.main-item ul li .active-item {
+  opacity: 0;
+  transition: opacity .3s;
+  position: absolute; top: 0; left: 0;
+}
+
+.main-item ul li .active-item:hover { opacity: 1; }
+
+.title, .products-title {
+  height: 1px;
+  background: #E5E3E2;
+  position: relative;
+}
+
+.title p {
+  color: #7d716d;
+  font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  background: #fff;
+  padding: 0 10px;
+  position: absolute;
+  top: -15px; left: 50%;
+  transform: translateX(-50%);
+}
+
+.title1 { margin-top: 70px; }
+
+.recommand-item {
+  margin-top: 60px;
+  overflow: auto;
+}
+.recommand-item dl { float: left; margin-right: 26px; }
+.recommand-item dl:nth-child(4),
+.recommand-item dl:nth-child(8) {
+  margin-right: 0;
+}
+
+.recommand-item dl dt img { width: 280px; }
+.recommand-item dl dd, .products dl dd { font-size: 12px; position: relative; }
+.recommand-item dl dd .item-title, .products dl dd .item-title {
+  font-family: 'Gotham-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.item-title a { color: #7c6e66; }
+.price { color: #7c6e66; font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.price .cancel { text-decoration: line-through; }
+.price .on-sale { color: #e22b39; text-decoration: none; }
+.like {
+  display: inline-block;
+  width: 21px; height: 20px;
+  background: url(http://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/icon-fav-outline.png);
+  position: absolute;
+  top: 0; right: 0;
+  cursor: pointer;
+}
+
+.like:hover {
+  background: url(http://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/icon-fav-hover.png) no-repeat;
+}
+
+.yellow-link {
+  display: inline-block;
+  color: #eacc12;
+  font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  float: right;
+}
+
+.yellow-link:hover { color: #eacc12; }
+.title2 { margin-top: 130px; }
+
+.sns-item {
+  margin-top: 60px;
+  overflow: auto;
+}
+
+.sns-item > * { float: left; }
+.items { width: 594px; }
+.items li { text-align: center; }
+.instagram-item li:hover .black-bg, .blog-item .items:hover .black-bg { background: rgba(0, 0, 0, 0.75); }
+li:hover .black-bg button, li:hover .black-bg img,
+.shop-social li:hover .total-like, .shop-social li:hover .total-like > * { opacity: 1; }
+
+.instagram-item .items { overflow: auto; }
+
+.black-bg {
+  width: 100%; height: 100%;
+  background-color: transparent;
+  transition: background-color 1s;
+}
+
+.shop-it {
+  color: #fff;
+  font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  margin: 45px 0;
+  padding: 10px 25px;
+  border: 2px solid #fff;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.items .read {
+  color: #fff;
+  font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  padding: 10px 50px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 1s;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shop-it:hover, .blog-item .items:hover .read {
+  border: 2px solid #eacc12;
+  background: #eacc12;
+}
+
+.instagram-item > p, .blog-item > p {
+  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
+  text-align: center;
+  font-size: 20px;
+}
+
+.instagram-item > p a, .blog-item > p a { color: #7D716D; }
+.instagram-item > p a:hover, .blog-item > p a:hover { color: #eacc12; text-decoration: none; }
+
+.instagram-item .items li { width: 195px; height: 195px; float: left; margin-right: 3px; margin-bottom: 3px; }
+
+.instagram-item .items li:nth-child(1) {
+  background: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/21041694_304001573407040_756145201667375104_n.jpg);
+  background-size: cover;
+}
+
+.instagram-item .items li:nth-child(2) {
+  background: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/21041272_177909572754289_1651094473507078144_n.jpg);
+  background-size: cover;
+}
+
+.instagram-item .items li:nth-child(3) {
+  background: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20905008_119657888627071_9158560890163822592_n.jpg);
+  background-size: cover;
+}
+
+.instagram-item .items li:nth-child(4) {
+  background: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20837162_2004692029777679_3960955123978469376_n.jpg);
+  background-size: cover;
+}
+
+.instagram-item .items li:nth-child(5) {
+  background: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20766940_1446568275429182_5574601717502181376_n.jpg);
+  background-size: cover;
+}
+
+.instagram-item .items li:nth-child(6) {
+  background: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20759763_140151266581190_2919507786142318592_n.jpg);
+  background-size: cover;
+}
+
+.instagram-item .items li:nth-child(7) {
+  background: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20688011_334318913685863_8304802996097646592_n.jpg);
+  background-size: cover;
+}
+
+.instagram-item .items li:nth-child(8) {
+  background: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20688268_1261697267290658_4994705450923458560_n.jpg);
+  background-size: cover;
+}
+
+.instagram-item .items li:nth-child(9) {
+  background: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20633392_170240320187691_5515749124969857024_n.jpg);
+  background-size: cover;
+}
+
+.instagram-item .items li img, .shop-social li img,
+.shop-social li .count, .shop-social li .total-like { opacity: 0; transition: opacity 1s; }
+
+.blog-item { margin-left: 10px; text-align: center; }
+.blog-item .items {
+  width: 594px; height: 594px;
+  background: url(http://www.elumdesigns.com/pub/media/wysiwyg/home/blog_feature/HomePage_Button_Blog.jpg);
+  background-size: cover;
+}
+
+.black-bg { position: relative; }
+
+.products { margin: 40px 0; }
+.products:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.products p { margin: 0; }
+
+.products-title {
+  width: 100%; height: 1px;
+  background: #E5E3E2;
+  margin-top: 50px;
+  position: relative;
+}
+
+.products-title p {
+  color: #eacc12;
+  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  background: #fff;
+  margin: 0;
+  padding: 0px 15px;
+  position: absolute;
+  top: -18px; left: 50%;
+  transform: translateX(-50%);
+}
+
+.section { margin-top: 50px; }
+.section:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.section > * { float: left; }
+.section .aside { width: 25%; }
+
+.section .aside {
+  font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.section .aside .card-header {
+  font-size: 14px;
+  padding: 25px 15px 10px;
+  border-bottom: 1px solid #e5e3e2;
+  overflow: auto;
+}
+
+.section .aside .card:first-child .card-header {
+  color: #7c6e66;
+  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background: #F2F1F0;
+  border: 0;
+  padding: 13px;
+}
+
+.section .aside .card-header a { display: inline-block; width: 100%; color: #7c6e66; overflow: auto; }
+.section .aside .card-header a:hover { color: #2b2726; text-decoration: none; }
+.section .aside .card-header p { margin: 0; float: left; }
+.section .aside .card-header a[aria-expanded="true"] .expand {
+  display: block;
+  width: 17px; height: 4px;
+  background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/icon-shape-minus.png);
+  margin-top: 7px;
+  float: right;
+}
+
+.section .aside .card-header a[aria-expanded="false"] .expand {
+  display: block;
+  width: 17px; height: 18px;
+  background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/icon-shape-plus.png);
+  float: right;
+}
+.section .aside .card-block { padding: 25px 10px 0; }
+.section .aside .card-block li { margin-bottom: 35px; overflow: auto; }
+.section .aside .card-block li:last-child { margin-bottom: 0; }
+.section .aside .card-block li > * { float: left; }
+.section .aside .card-block input[type="checkbox"] { display: none; }
+.section .aside .card-block input[type="checkbox"] + label {
+  display: inline-block;
+  width: 14px; height: 14px;
+  background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/rectangle-box.png);
+  margin: 0;
+  margin-top: 4px;
+  margin-right: 10px;
+}
+
+.section .aside .card-block input[type="checkbox"]:checked + label {
+  display: inline-block;
+  width: 14px; height: 14px;
+  background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/rectangle-box-selected.png);
+}
+
+.section .aside .card-block .option {
+  color: #7c6e66;
+  font-family: 'Gotham-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.section .aside .card-block input[type="checkbox"]:checked + label + .option {
+  color: #7D716D;
+  font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.section .aside .card-block .option:hover { text-decoration: underline; }
+.section .aside .card-block .option span { color: #c2b9b4; font-family: 'Gotham-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.section .aside .collapsing { transition: none; }
+.section .item-section { width: 75%; color: #7c6e66; }
+.section .item-section.no-aside { width: 100%; }
+
+.page-info {
+  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding-left: 15px;
+  margin: 5px 0 25px;
+}
+
+.page-setting {
+  font-family: 'Gotham-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-left: 15px;
+  overflow: auto;
+}
+
+.page-setting .sort { float: left; }
+.page-setting .sort > * { float: left; }
+.page-setting .sort p { font-size: 16px; margin: 0; margin-top: 8px; }
+
+.page-setting .sort .standard {
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  background: #f0f0f0;
+  margin-left: 15px;
+  padding: 10px;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: inset 0 2px 1px rgba(0,0,0,0.12);
+  outline: none;
+}
+
+.page-setting .sort .orderby {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background-image: url(../img/descending.png);
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.page-setting .sort .orderby:hover { background-image: url(../img/descending_active.png); }
+
+.page-setting .pages { float: right; }
+.page-setting .pages ul { font-size: 16px; overflow: auto; }
+.page-setting .pages ul li { float: left; padding: 0 10px; }
+.page-setting .pages ul li a { color: #7c6e66; }
+.page-setting .pages ul li.active a { color: #eacc12; font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.page-setting .pages ul li a:hover { color: #eacc12; text-decoration: none; }
+.page-setting .pages ul li span {
+  display: inline-block;
+  width: 6px; height: 10px;
+  background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/icon-small-triangle-right.png);
+}
+
+.page-setting .pages ul li a:hover span {
+  background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/images/icon-small-triangle-right-yellow.png);
+}
+
+.item-section .products dl {
+  width: 33.33%; height: 390px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  float: left;
+}
+
+.item-section.no-aside .products dl { width: 25%; }
+
+.products dl dt a { display: inline-block; width: 100%; height: 100%; position: relative; }
+.products dl dt img:nth-child(1) { width: 100%; }
+.products dl dt .active-img { opacity: 0; position: absolute; top: 0; left: 0; }
+.products dl:hover dt .active-img { opacity: 1; }
+
+.products dl dt p {
+  width: 100%;
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  text-align: center;
+  background: rgba(124,110,102,0.9);
+  padding: 17px 50px;
+  position: absolute;
+  bottom: 10px; left: 0;
+  opacity: 0;
+}
+
+.products dl:hover dt p { opacity: 1; }
+
+.products dl dt .new-icon { width: 60px; opacity: 0; position: absolute; top: -15px; left: -15px; z-index: 2; }
+.products dl.new:hover dt .new-icon { opacity: 1; }
+
+.page-setting .items-per-page { color: #7D716D; float: left; overflow: auto; }
+.page-setting .items-per-page > * { margin: 0; float: left; }
+.page-setting .items-per-page p {
+  font-family: 'FilosofiaOT-Italic',Georgia,'Times New Roman',Times,serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-right: 20px;
+}
+
+.page-setting .items-per-page ul { margin-top: 2px; overflow: auto; }
+.page-setting .items-per-page li { float: left; margin: 0 13px; }
+.page-setting .items-per-page li a { color: #BAB1AC; }
+.page-setting .items-per-page li.active a { color: #eacc12; }
+
+.shop-social { overflow: auto; }
+.shop-social li {
+  width: 390px; height: 390px;
+  background-size: cover;
+  margin-bottom: 15px;
+  float: left;
+}
+
+.shop-social li:nth-child(2), .shop-social li:nth-child(5),
+.shop-social li:nth-child(8), .shop-social li:nth-child(11),
+.shop-social li:nth-child(14), .shop-social li:nth-child(17),
+.shop-social li:nth-child(20), .shop-social li:nth-child(23),
+.shop-social li:nth-child(26), .shop-social li:nth-child(29),
+.shop-social li:nth-child(32), .shop-social li:nth-child(35),
+.shop-social li:nth-child(38), .shop-social li:nth-child(41),
+.shop-social li:nth-child(44), .shop-social li:nth-child(47),
+.shop-social li:nth-child(50), .shop-social li:nth-child(53),
+.shop-social li:nth-child(56) {
+  margin: 0 15px;
+}
+
+.shop-social li:nth-child(1) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/21041694_304001573407040_756145201667375104_n.jpg); }
+.shop-social li:nth-child(2) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/21041272_177909572754289_1651094473507078144_n.jpg); }
+.shop-social li:nth-child(3) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20905008_119657888627071_9158560890163822592_n.jpg); }
+.shop-social li:nth-child(4) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20837162_2004692029777679_3960955123978469376_n.jpg); }
+.shop-social li:nth-child(5) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20759763_140151266581190_2919507786142318592_n.jpg); }
+.shop-social li:nth-child(6) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20766940_1446568275429182_5574601717502181376_n.jpg); }
+.shop-social li:nth-child(7) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20688011_334318913685863_8304802996097646592_n.jpg); }
+.shop-social li:nth-child(8) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20688268_1261697267290658_4994705450923458560_n.jpg); }
+.shop-social li:nth-child(9) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20633392_170240320187691_5515749124969857024_n.jpg); }
+.shop-social li:nth-child(10) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20589724_135900283676880_5812749631066472448_n.jpg); }
+.shop-social li:nth-child(11) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20633263_340974529673607_8601484038231818240_n.jpg); }
+.shop-social li:nth-child(12) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20482094_1622571701120559_1339972553027878912_n.jpg); }
+.shop-social li:nth-child(13) { background-image: url(https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/19985957_257080648138580_7524232448561905664_n.jpg); }
+.shop-social li:nth-child(14) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/7/_/7.29_bw-sqnotepad-1.jpg); }
+.shop-social li:nth-child(15), .shop-social li:nth-child(16),
+.shop-social li:nth-child(18), .shop-social li:nth-child(20) {
+  background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/placeholder/default/elum-instagram-image-placeholder.gif);
+}
+
+.shop-social li:nth-child(17) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/7/_/7.28_bw-washitape-1.jpg); }
+.shop-social li:nth-child(19) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/7/_/7.27_pop-lightbulblp-1.jpg); }
+.shop-social li:nth-child(21) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/7/_/7.22_pop-circusjournal-1.jpg); }
+.shop-social li:nth-child(22) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/7/_/7.21_jetsetter-ge-igfb10.00.jpg); }
+.shop-social li:nth-child(23) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/7/_/7.20_fruit-washi-igfb.jpg); }
+.shop-social li:nth-child(24) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/8/_/8.6_pop-icecreamgc-1.jpg); }
+.shop-social li:nth-child(25) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/7/_/7.19_fruit-pineapplejournal-2-zoom.jpg); }
+.shop-social li:nth-child(26) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/6/_/6.5_hotp_unicornaward.jpg); }
+.shop-social li:nth-child(27) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/s/c/screen_shot_2017-06-30_at_4.13.54_pm.png); }
+.shop-social li:nth-child(28) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/6/_/6.14_lagoonwoodgrain-bijou.jpg); }
+.shop-social li:nth-child(29) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/6/_/6.5_hotp_unicornaward.jpg); }
+.shop-social li:nth-child(30) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/e/l/elum_edgepaintednoteboards.jpg); }
+.shop-social li:nth-child(31) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/5/_/5.30_fancypair_sam.jpg); }
+.shop-social li:nth-child(32) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/5/_/5.30_pottedplants_ali.jpg); }
+.shop-social li:nth-child(33) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/b/s/bs101.jpg); }
+.shop-social li:nth-child(34) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc763.jpg); }
+.shop-social li:nth-child(35) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/d/a/darling_washi.jpg); }
+.shop-social li:nth-child(36) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/h/e/heylady.jpg); }
+.shop-social li:nth-child(37) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/4/_/4.23_rainbowpencils.jpg); }
+.shop-social li:nth-child(38) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/s/c/screen_shot_2017-06-26_at_9.13.05_am.png); }
+.shop-social li:nth-child(39) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/o/b/observer.jpg); }
+.shop-social li:nth-child(40) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/i/girlyouareamazing.jpg); }
+.shop-social li:nth-child(41) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/s/p/spacemap.jpg); }
+.shop-social li:nth-child(42) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc589.jpg); }
+.shop-social li:nth-child(43) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/3/_/3.18.17_louie6_cutestcouple.jpg); }
+.shop-social li:nth-child(44) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/k/o/koi.jpg); }
+.shop-social li:nth-child(45) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc846.jpg); }
+.shop-social li:nth-child(46) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc834_beminesymbols_sq.jpg); }
+.shop-social li:nth-child(47) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc840_bonjourvalentine_sq.jpg); }
+.shop-social li:nth-child(48) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc843_loveyousmore_sq.jpg); }
+.shop-social li:nth-child(49) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc842_loveyourguts_sq.jpg); }
+.shop-social li:nth-child(50) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc839_puurfectcombo_sq.jpg); }
+.shop-social li:nth-child(51) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc837_happyplace_sq.jpg); }
+.shop-social li:nth-child(52) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc836_perfectpair_sq.jpg); }
+.shop-social li:nth-child(53) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc835_adventuretogether_sq.jpg); }
+.shop-social li:nth-child(54) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc838_prettylittlething_sq.jpg); }
+.shop-social li:nth-child(55) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/1/_/1.15_gc845_hearteyes_sq.jpg); }
+.shop-social li:nth-child(56) { background-image: url(https://www.elumdesigns.com/pub/media/catalog/product/cache/mojomage_instagram_media_img/640x640/beff4985b56e3afdbeabfc89641a4582/g/c/gc841_topbuns_sq.jpg); }
+
+.shop-social li:hover .black-bg { background: rgba(0, 0, 0, 0.5); }
+
+.shop-social .shop-it {
+  margin: 0;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shop-social .insta-icon { position: absolute; bottom: 20px; left: 20px; }
+.shop-social .total-like {
+  border: 3px solid #fff;
+  border-radius: 15px;
+  padding: 2px 10px;
+  overflow: auto;
+  position: absolute;
+  bottom: 20px; right: 20px;
+}
+
+.shop-social .total-like > * { float: left; }
+.shop-social .total-like img { margin-top: 2px; }
+.shop-social .count {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.alert {
+  background: #faddbe;
+  border-bottom: 1px solid #f5a37d;
+  border-radius: 0;
+  padding: 6px;
+  overflow: auto;
+}
+
+.alert > * { float: left; }
+.alert img { margin-top: 2px; }
+.alert p { margin-left: 15px; }
+
+.sign-up { color: #7D716D; font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.sign-up h2, .create-account h2, .sign-in h2 {
+  font-family: 'Gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.required { color: #e02b27; }
+.row { margin: 0; margin-bottom: 30px; overflow: auto; }
+.sign-up .security-row { margin-bottom: 5px; overflow: auto; }
+.sign-up .row > * { float: left; }
+.sign-up .security-row > * { float: left; }
+.sign-up label, .sign-in label { width: 150px; text-align: right; margin: 0; }
+.sign-up label[for="newsletter"], .sign-up label[for="remember"], .sign-in label[for="remember"] {
+  width: auto;
+  font-family: 'Gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-left: 5px;
+}
+
+.sign-up input[type=text] {
+  width: 450px; height: 35px;
+  background: #f7f7f7;
+  border: 0;
+  border-bottom: 1px solid #e5e3e2;
+  margin-left: 10px;
+  padding: 0 10px;
+}
+
+.sign-up .pw-status {
+  width: 450px; height: 35px;
+  font-family: 'Gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #f7f7f7;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+#newsletter, #remember { margin-left: 165px; }
+form a { color: #eacc12; }
+.sign-up .security-img, .reload { float: left; }
+.sign-up .security-img { margin-top: 10px; margin-left: 165px; }
+.sign-up .reload {
+  color: #7d716d;
+  font-size: 13px;
+  letter-spacing: -1px;
+  background: #f5f5f5;
+  border: 1px solid #e5e3e2;
+  margin-top: 15px;
+  margin-left: 10px;
+  padding: 12px 25px;
+}
+
+.sign-up .reload:hover { color: #fff; background: #eacc12; }
+
+.sign-up .submit, .create-account .submit, .sign-in .submit {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #eacc12;
+  border: 2px solid #eacc12;
+  padding: 10px 35px;
+}
+
+.sign-up .submit:hover, .create-account .submit:hover { color:#eacc12; background: #fff; }
+
+.sign:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.sign form { height: 600px; float: left; }
+
+.create-account { padding-right: 100px; border-right: 1px solid #E5E3E2; }
+.create-account, .sign-in { color: #7d716d; font-family: 'Gotham-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.create-account h2, .sign-in h2 {
+  font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 25px 0;
+}
+
+.create-account p, .sign-in p { font-size: 16px; margin-bottom: 30px; }
+.create-account .submit, .sign-in .submit {
+  font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-top: 15px;
+}
+
+.sign-in { padding-left: 60px; }
+.sign-in label { width: 100px; font-family: 'Gotham-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.sign-in input[type=text] {
+  width: 250px; height: 40px;
+  background: #f7f7f7;
+  border: 0;
+  border-bottom: 1px solid #e5e3e2;
+  margin-left: 10px;
+  padding: 0 10px;
+}
+
+.sign-in #remember { margin-left: 115px; }
+.sign-in .required { font-size: 12px; }
+.forgot-pw { font-size: 16px; }
+.forgot-pw:hover { color: #cd9700; }
+
+.sign-in .sns-btn {
+  width: 225px;
+  color: #7d716d;
+  font-family: 'Gotham-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
+  background: #F5F5F4;
+  border: 0;
+  padding: 15px;
+}
+
+.sign-in .sns-btn:hover {
+  color: #fff;
+  background-color: #eacc12;
+}
+
+.sign-in .insta-btn { margin-left: 10px; }
+.sign-in .amazon-btn { margin-top: 7px; }
+
+.sign-in .sns-btn > * { float: left; }
+.sign-in .sns-btn p { font-size: 13px; margin: 0; margin-left: 35px; }
+.sign-in .sns-btn span { display: block; width: 19px; height: 20px; }
+.sign-in .google-btn span { background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/Magestore_Sociallogin/css/sociallogin/google.png); }
+.sign-in .google-btn:hover span { background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/Magestore_Sociallogin/css/sociallogin/google-active.png); }
+.sign-in .insta-btn span { background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/Magestore_Sociallogin/css/sociallogin/instagram.png); }
+.sign-in .insta-btn:hover span { background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/Magestore_Sociallogin/css/sociallogin/instagram-active.png); }
+.sign-in .amazon-btn span { background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/Magestore_Sociallogin/css/sociallogin/amazon.png); }
+.sign-in .amazon-btn:hover span { background-image: url(https://www.elumdesigns.com/pub/static/version1502483131/frontend/Elum/default/en_US/Magestore_Sociallogin/css/sociallogin/amazon-active.png); }
