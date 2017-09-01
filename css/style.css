@@ -11,6 +11,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
 * { margin: 0; padding: 0; }
+ul { margin: 0; }
 li { list-style: none; }
 textarea, input, button { outline: none; }
 
@@ -416,7 +417,7 @@ body,
 .items { width: 594px; }
 .items li { text-align: center; }
 .instagram-item li:hover .black-bg, .blog-item .items:hover .black-bg { background: rgba(0, 0, 0, 0.75); }
-li:hover .black-bg button, li:hover .black-bg img,
+ul li:hover .black-bg button,ul li:hover .black-bg img,
 .shop-social li:hover .total-like, .shop-social li:hover .total-like > * { opacity: 1; }
 
 .instagram-item .items { overflow: auto; }
@@ -456,6 +457,7 @@ li:hover .black-bg button, li:hover .black-bg img,
 .shop-it:hover, .blog-item .items:hover .read {
   border: 2px solid #eacc12;
   background: #eacc12;
+  opacity: 1;
 }
 
 .instagram-item > p, .blog-item > p {
